@@ -1,0 +1,207 @@
+/* Reset de márgenes y rellenos para el body y ul */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header {
+    background-color: #D9D9D9;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* tituloo */
+header h1 {
+    margin: 0;
+}
+
+/* navega */
+nav {
+    text-align: center;
+}
+
+/*  listamenu */
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* elementos al centro */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas mas chicas*/
+}
+
+/* Estilo  elementos lista */
+.navbar li {
+    margin: 20px 10px; /* Espacio entre estos */
+}
+
+/* enlaces*/
+.navbar li a {
+    color: black;
+    text-decoration: none;
+    
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+/*  enlaces al pasar el mouse */
+.navbar li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    color: white;
+}
+
+/* para el main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Estilo para portada */
+.portada {
+    width: 100%;
+    height: 500px; 
+    background-image: url('../assets/img/portadaperfumes.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; /* No se repite */
+    background-position: center; /* Centra la imagen */
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.textoPortada {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+}
+
+/* aca las secciones */
+section {
+    width: 100%;
+    
+    max-width: 1200px; /* Ancho las secciones */
+    margin: 50px 0; /* Espacio entre secciones */
+    text-align: center;
+    max-width: 1200px; 
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las galerías de productos */
+.galeriaProductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+/*Estilo para cada producto */
+.producto {
+    text-align: center;
+    width: calc(25% - 40px); /* Cuatro columnas con espacio entre ellas */
+    box-sizing: border-box;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+.producto button {
+    margin-top: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.producto button:hover {
+    background-color: #333;
+}
+
+/* hacer el sitio responsivo */
+@media (max-width: 992px) {
+    .producto {
+        width: calc(33.33% - 40px); /* Tres columnas */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar li {
+        margin: 10px 0;
+    }
+    .producto {
+        width: calc(50% - 40px); /* Dos columnas */
+    }
+}
+
+@media (max-width: 480px) {
+    .producto {
+        width: calc(100% - 40px); /* Una columna */
+    }
+    .textoPortada {
+        font-size: 1.5em;
+    }
+}
+
+
+/* Importar fuente */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+}
+
+
+header h1 {
+    font-weight: 600; /*peso pesado*/
+}
+
+section h2 {
+    font-weight: 600;
+}
+
+
+/*  ACA EL FOOTER */
+footer {
+    background-color: #D9D9D9;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-button {
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #333;
+}
